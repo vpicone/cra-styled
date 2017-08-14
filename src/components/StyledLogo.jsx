@@ -2,14 +2,39 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import logo from "./logo.svg";
 
-const rotate360 = keyframes`
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-`;
+
+const pulsate = keyframes`
+    0% {
+        transform: scale(1.05);
+    }
+    15% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.10);
+    }
+    60% {
+        transform: scale(1.02);
+    }
+    90% {
+        transform: scale(1.01);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+`
 
 const StyledLogo = styled.img`
-  animation: ${rotate360} infinite 20s linear;
+  margin: 10px;
+  transition: all 5s ease-in-out;
+  &:hover {
+    transform: rotate(360deg);
+    animation: ${pulsate} .8s ease-in-out 0s infinite;
+  }
   height: 80px;
+  width: 80px;
 `;
+
+
 
 export default () => <StyledLogo src={logo} />;
