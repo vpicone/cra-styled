@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import logo from "./logo.svg";
-
+import { goToTop } from "react-scrollable-anchor";
 
 const pulsate = keyframes`
     0% {
@@ -22,19 +22,21 @@ const pulsate = keyframes`
     100% {
         transform: scale(1.05);
     }
-`
+`;
 
 const StyledLogo = styled.img`
   margin: 10px;
+  position: absolute;
+  left: 30%;
+  top: 10px;
   transition: all 5s ease-in-out;
   &:hover {
     transform: rotate(360deg);
     animation: ${pulsate} .8s ease-in-out 0s infinite;
+    cursor: pointer;
   }
   height: 80px;
   width: 80px;
 `;
 
-
-
-export default () => <StyledLogo src={logo} />;
+export default () => <StyledLogo onClick={goToTop} src={logo} />;
