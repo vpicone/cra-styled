@@ -9,12 +9,14 @@
     "react-headroom": "^2.1.6",
     "react-scripts": "1.0.11",
     "react-scrollable-anchor": "^0.4.2",
+    "serve": "^6.0.6",
     "styled-components": "^2.1.2",
     "typeface-open-sans": "0.0.35"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "now-start": "serve -s build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

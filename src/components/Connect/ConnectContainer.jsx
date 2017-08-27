@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import Github from "./github.svg";
 import Linkedin from "./linkedin.svg";
 import Twitter from "./twitter.svg";
+import Email from "./email.svg";
 import styled from "styled-components";
 
-const SocialLink = styled.img`height: 75px;`;
+const SocialLink = styled.img`height: 60px;`;
 
 class ConnectContainer extends Component {
   render() {
@@ -36,6 +37,12 @@ class ConnectContainer extends Component {
             href="https://www.linkedin.com/in/vincentpicone/"
           >
             <SocialLink src={Linkedin} />
+          </a>
+          <a
+            style={{ margin: "10px" }}
+            href="mailto:vpicone@gmail.com?Subject=Build%20Something"
+          >
+            <SocialLink src={Email} />
           </a>
         </div>
       </div>

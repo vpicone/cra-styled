@@ -25,15 +25,10 @@ const pulsate = keyframes`
 `;
 
 const StyledLogo = styled.img`
-  margin: 10px;
-  position: absolute;
-  left: 30%;
-  top: 10px;
   transition: all 5s ease-in-out;
   &:hover {
     transform: rotate(360deg);
     animation: ${pulsate} .8s ease-in-out 0s infinite;
-    cursor: pointer;
   }
   height: 80px;
   width: 80px;

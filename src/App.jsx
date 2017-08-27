@@ -12,7 +12,6 @@ class App extends Component {
     return (
       <div className="App">
         <HeaderContainer />
-        <a href="#connect"> Go to section 1 </a>
         <ProjectContainer />
         <ScrollableAnchor id={"connect"}>
           <ConnectContainer />
